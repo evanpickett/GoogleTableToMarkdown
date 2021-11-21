@@ -1,0 +1,29 @@
+Jabref
+[Invalid DOI should not show "Connection error"](https://github.com/JabRef/jabref/issues/8127)
+
+
+Jie (jzheng5)
+
+
+removeInvalidDOICharacter
+
+
+**Precondition:** 
+1. Open Jabref 
+2. Open https://link.springer.com/book/10.1007/978-3-319-47590-5, and download PDF; go to page 207, select and copy the DOI in the footnote
+
+**Steps to Reproduce:**
+1. Open ‘New entry dialog’, 
+2. paste DOI which will be shown with an extra question mark, then click ‘Generate’.
+
+**Isolation:**
+1. We tried this in Windows 10, Linux OS (Ubuntu 20.04), and MacBook. The extra question mark only showed up in Windows 10 after paste DOI. However, if we add an extra question mark at the end of DOI in Linux and MacBook, we still get the connection error.
+2. We also tried add other invalid character at the end of DOI, such as #, $, %, …, and we all observed connection errors in all 3 OS.
+
+
+The invalid character that appeared at the end of the DOI was removed automatically and the DOI data was fetched.
+![]()
+
+DOI was not fetched and connection error was returned.
+![]()
+
